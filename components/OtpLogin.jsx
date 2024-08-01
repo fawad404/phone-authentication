@@ -41,9 +41,11 @@ const OtpLogin = () => {
           auth,
           "recaptcha-container",
           {
-            size: "invisible"
-          }
-        );
+            'size': "invisible",
+              callback: () => {
+        console.log('recaptcha resolved..')
+    }
+          });
       
         setRecaptchaVerifier(recaptchaVerifier);
       
